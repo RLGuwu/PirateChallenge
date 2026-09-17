@@ -789,18 +789,27 @@
 
 @media (max-width: 600px) {
   .touch-controls {
-    grid-template-columns: repeat(3, 46px);
-    gap: 8px;
+    grid-template-columns: repeat(3, 52px);
+    gap: 6px;
+    bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .touch-controls-left {
+    left: 12px;
+  }
+
+  .touch-controls-right {
+    right: 12px;
   }
 
   .touch-button {
-    width: 46px;
-    height: 46px;
+    width: 52px;
+    height: 52px;
   }
 
   .touch-button img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
   }
 
   .game-controls-hint {

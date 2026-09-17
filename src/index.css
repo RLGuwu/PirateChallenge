@@ -1,0 +1,32 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  /*
+   * Every screen paints its own background, but nothing here ever did - so
+   * the browser's default white showed through during any frame the main
+   * thread was too busy to have committed the next screen yet (most
+   * noticeably: leaving a finished match, when PixiJS synchronously tears
+   * down every ship/effect sprite). A dark fallback here means that gap
+   * reads as a normal frame instead of a jarring white flash.
+   */
+  background: #0b1f2e;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
